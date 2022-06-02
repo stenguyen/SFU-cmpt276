@@ -1,0 +1,38 @@
+body{/*set all the colour of the body to color*/
+    color:red;
+}
+
+/* .red{ /*class which sets all the instances of the class to have this background color
+    background-color: yellow;
+} */
+
+#navigate1{ /*set the id navigate1 to have these values*/
+    font-size: 2em; /*double the font size by its expected measurement/pixel size*/
+    font-family: cursive;/*change the font*/
+    border: 1px solid red;/*add a border around this section*/
+}
+
+img{/*attributes given to all images on the site*/
+    border: 1px solid black; 
+    width: 200px;
+    border-radius: 30%; /*add rounded corners to image*/
+    /* float:  left; */ /*move text to the side like in microsoft word with images*/
+    position: fixed; /*the position state of the image and how it interacts with the site*/
+    top: 50px; /*move the img #pixels up*/
+    left: 125px;/*move the img #pixels left*/
+    /* z-index:    -1; *//*the layer in which this where the image is rendered. (above text, below text, etc)*/
+}
+
+[type="text"]{/*set all of type="" to have smt (similar to classes and ids*/
+    border: 4px solid green;
+}
+
+/*idk ill search it up smt about moving things around*/
+/* form{
+    clear:  left; 
+} */
+
+/*if mouse hovers over this id, have the background color appear*/
+#sfu_link:hover{
+    background-color: blue;
+}
