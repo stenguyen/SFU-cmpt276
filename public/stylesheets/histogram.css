@@ -1,5 +1,7 @@
 body{
-    background-color: blanchedalmond;
+    /* white hurts on the eyes */
+    /* background-color: white; if you want to burn your eyes */
+    background-color: blanchedalmond; 
 }
 
 /* the id for the main title */
@@ -49,7 +51,9 @@ body{
 }
 /* grid for histogram */
 .hist{
-    background-color: cornflowerblue;
+    /*background-color: cornflowerblue;*/
+    background-color:darkgray;
+    
     grid-area: histo;
 
     /* rounded edges*/
@@ -58,7 +62,8 @@ body{
 }
 /* grid for new grade */
 .newG{
-    background-color: darksalmon;
+    /* background-color: darksalmon; */
+    background-color:darkgray;
     grid-area: grade;
 
     /* rounded edges*/
