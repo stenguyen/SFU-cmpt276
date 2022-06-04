@@ -14,12 +14,10 @@ body{
 .container{
     display: grid;
     /*2 columns, different sizes for each*/
-    grid-template-columns: 400px 350px;
+    grid-template-columns: 350px 350px;
     /* ensure minimum space of xpixels, automatically grow when too much text */
     grid-auto-rows: minmax(200px,auto);
 
-    /* grid-row-gap: 10px;
-    grid-column-gap: 10px; */
     /* the gap between the col and row */
     grid-gap: 10px;
 
@@ -38,6 +36,7 @@ body{
     margin: 2% 2%;
     
 }
+
 
 /* grid for lower bound */
 .lbs{
@@ -74,23 +73,59 @@ body{
     font-weight: bold;
 
     margin: 4% 6%;
-
-    /* display: flex;
-    /* postion from the start */
-    /* align-items: flex-start;
-    margin-bottom: 15px; */ 
 }
 
-/* for table */
-table {
+/* to format the grade box */
+input {
+    width: 50%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: solid black;
+    border-width: thin;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* add the spacing for the table in LB */
+#table1{
     border-collapse: separate;
     border-spacing: 50px 0;
+    display: grid;
 }
 
-/* td {
-    padding: 3% 0;
-} */
+/* add the spacing for the Histogram */
+#table2{
+    display: grid;
+    border-collapse: separate;
+    border-spacing: 40px 0;
+}
 
+/* spacing for table 1 */
+#table1 td{
+    /* padding for the table */
+    padding-bottom: 30px;
+}
+
+/* spacing for table 2 */
+#table2 td{
+    /* if too long, break up and move to next line */
+    word-wrap: break-word;
+    max-width: 150px;
+    /* padding for the table */
+    padding-bottom: 15px;
+    border-spacing:100px;
+} 
+
+/* for the third table */
+#table3{
+    border-collapse: separate;
+    border-spacing: 10px 20px;
+    display: grid;
+}
 
 
 /*average text */
@@ -99,29 +134,4 @@ table {
     font-size: 1.3em; 
     font-family: Times;
     font-weight:600;
-
-    margin: 5% 10%;
-    padding: 4% 0;
 }
-
-/* for text in histogram for spacing */
-.textH{
-    color: black;
-    font-size: 1.3em; 
-    font-family: Times;
-    font-weight: 600;
-
-    margin: 5% 30%;
-    padding: 2% 0;
-}
-
-/* only for use with the new grade section */
-/* .TextG{
-    color: black;
-    font-size: 1.3em; 
-    font-family: Times;
-    font-weight:600;
-
-    margin: 2% 5%;
-    padding: 4% 0;
-} */

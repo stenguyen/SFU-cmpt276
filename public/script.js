@@ -15,15 +15,19 @@
 
 
 //-- arrays
-// function asc(a,b){
-//     return a-b;
-// }
+function asc(a,b){
+    return b-a;
+}
 
-// var arr = [10,22,13,54,5,69];
-// arr.sort(asc);
-// // for(item in arr){
-// //     console.log(arr[item]);
-// // }
+var arr = [65.95, 56.98, 78.62, 96.1, 90.3, 72.24, 92.34, 60.00, 81.43, 86.22, 88.33, 9.03, 49.93, 52.34, 53.11, 50.10, 88.88, 55.32, 55.69, 61.68, 70.44, 70.54, 90.0, 71.11, 80.01];
+arr.sort(asc);
+var num = 0;
+for(item in arr){
+    num++;
+    console.log(arr[item]);
+}
+
+console.log(num);
 
 // /**return true or false, only if all values in the array has it*/
 // var x = arr.every(function(val){
