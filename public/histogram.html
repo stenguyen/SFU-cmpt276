@@ -16,50 +16,102 @@
             <!-- subtitle -->
             <div class="title">Lower Bounds</div>
             <!-- the text -->
-            <table>
+            <table id="table1">
                 <tr>
                     <td class="text">Max</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb1">
+                            <input type="number" id="num1" value="100"/>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text">A+</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb2">
+                            <input type="number" id="num2" value="95"/>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text">A</td>
+                    <td class="text">
+                        <form id="lb3">
+                            <input type="number" id="num3" value="90"/>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text">A-</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb4">
+                            <input type="number" id="num4" value="85"/>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text">B+</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb5">
+                            <input type="number" id="num5" value="80"/>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text">B</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb6">
+                            <input type="number" id="num6" value="75"/>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text">B-</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb7">
+                            <input type="number" id="num7" value="70"/>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text">C+</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb8">
+                            <input type="number" id="num8" value="65"/>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text">C</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb9">
+                            <input type="number" id="num9" value="60"/>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text">C-</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb10">
+                            <input type="number" id="num10" value="55"/>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text">D</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb11">
+                            <input type="number" id="num11" value="50"/>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text">F</td>
-                    <td class="text"><input type="number" id="rollno" /></td>
+                    <td class="text">
+                        <form id="lb12">
+                            <input type="number" id="num12" value="0"/>
+                        </form>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -68,67 +120,78 @@
 
 
         <div class="hist">
+            <scriptscript type="text/javascript" src="./calculate.js"></script>
             <!-- subtitle -->
             <div class="title">Histogram</div>
             <!-- the text -->
-            <table>
+            <table id="table2">
                 <tr>
-                    <td class="textH">A+</td>
-                    <td class="textH">OOOO</td>
+                    <td class="text">A+</td>
+                    <td class="text" id=h1></td>
                 </tr>
                 <tr>
-                    <td class="textH">A</td>
-                    <td class="textH">OO</td>
+                    <td class="text">A</td>
+                    <td class="text" id=h2></td>
                 </tr>
                 <tr>
-                    <td class="textH">A-</td>
-                    <td class="textH">OO</td>
+                    <td class="text">A-</td>
+                    <td class="text" id=h3></td>
                 </tr>
                 <tr>
-                    <td class="textH">B+</td>
-                    <td class="textH">OO</td>
+                    <td class="text">B+</td>
+                    <td class="text" id=h4></td>
                 </tr>
                 <tr>
-                    <td class="textH">B</td>
-                    <td class="textH">OO</td>
+                    <td class="text">B</td>
+                    <td class="text"id=h5></td>
                 </tr>
                 <tr>
-                    <td class="textH">B-</td>
-                    <td class="textH">OO</td>
+                    <td class="text">B-</td>
+                    <td class="text" id=h6></td>
                 </tr>
                 <tr>
-                    <td class="textH">C+</td>
-                    <td class="textH">OO</td>
+                    <td class="text">C+</td>
+                    <td class="text" id=h7></td>
                 </tr>
                 <tr>
-                    <td class="textH">C</td>
-                    <td class="textH">OO</td>
+                    <td class="text">C</td>
+                    <td class="text" id=h8></td>
                 </tr>
                 <tr>
-                    <td class="textH">C-</td>
-                    <td class="textH">OO</td>
+                    <td class="text">C-</td>
+                    <td class="text" id=h9></td>
                 </tr>
                 <tr>
-                    <td class="textH">D</td>
-                    <td class="textH">OO</td>
+                    <td class="text">D</td>
+                    <td class="text" id=h10></td>
                 </tr>
                 <tr>
-                    <td class="textH">F</td>
-                    <td class="textH">OO</td>
+                    <td class="text">F</td>
+                    <td class="text" id=h11></td>
                 </tr>
-
             </table>
         </div>
 
 
-        <!-- WIP -->
         <div class="newG">
-            <input id="grade" type="number" placeholder="whatever bro">;
-            <!-- <label for="newGrade">New Grade:</label>
-            <input id="newGrade" type="number" name="newGrade" value=""> -->
+            <table id="table3">
+                <tr>
+                    <td>
+                        <label for="myGrade">New Grade:</label>
+                        <input type="number" step="any" id="myGrade">
+                        <button type="button" id="myButton">sumbit</button> <br>
+                        <!--also do antoher functiom-->
+
+                        <!-- to just test the bounds -->
+                        <!-- <label for="test bounds">testing bounds:</label>
+                        <input type="text" id="boundT"> -->
+            
+                        <script type="text/javascript" src="./calculate.js"></script>
+                    </td>
+                </tr>
+            </table>
             
         </div>
     </div>
-    
 </body>
 </html>
