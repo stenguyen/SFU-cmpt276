@@ -12,13 +12,13 @@
 <h2>Database Results</h2>
 
 <ul>
-    <!--the '<%' in an ejs file means that you are referring to javascript/using javascript-->
+    <!--the '<% %>' in an ejs file means that you are referring to javascript/using javascript-->
     <!-- for everything inside of it -->
     <% results.forEach(function(r) { %>
         <!-- results is referring to the results given from index.js -->
         <!-- for everything in results, print out r -->
         <!-- print all r's in terms of list items (li) -->
-        <li><%= r %> </li>
+        <li> <%= r %> </li>
     <% }); %>
 </ul>
 
