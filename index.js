@@ -2,6 +2,19 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
+// require the pg package
+const {Pool} = require('pg');
+var pool;
+// create a connection to the database
+pool = new Pool({
+  // string that connects you to the database
+  // scheme:userthatisnamedpostgres:password for postgress@localhost on pc/the database named users
+
+  // connectionString: 'postgres://postgres:Tritrung01@localhost/users' (this string is for use on pc, not heroku)
+  connectionString: process.env.DATABASE_URL
+})
+
+
 var app = express();
 // always need these two things to work with json / javascript
 // need this to encode url to work with it in the server and to understand json
@@ -21,9 +34,19 @@ app.get('/', (req, res) => res.render('pages/index'));
 // request and response
 app.get('/database', (req,res) => {
   // results is an object with an array with these objects
-  var data = {results: [2,3,4,5,6]};
-  // render the page db.ejs in the pages folder after you send in var data
-  res.render('pages/db', data);
+  // var data = {results: [2,3,4,5,6]};
+
+  // selects all of the rows from the users table
+  var getUsersQuery = 'SELECT * FROM usr';
+  pool.query(getUsersQuery, (error,result) => {
+    // if error object from result of this query, send error
+    if(error)
+      res.end(error);
+    // assign a variable rows with all the data as an array that holds the data
+    var results = {'rows':result.rows}
+    // render the page db.ejs in the pages folder after you send in var results
+    res.render('pages/db', results);
+  })
 });
 
 // if you see a post request of adduser, do this
@@ -45,6 +68,7 @@ app.get('/user/:id', (req,res) =>{
   // the id is whatever comes after the colon 
   console.log(req.params.id);
   // so you don't get the spinning circle on the page/not waiting for response
+  // search the database for the uid
   res.send("got it!");
 });
 
