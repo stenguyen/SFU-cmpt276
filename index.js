@@ -11,7 +11,10 @@ pool = new Pool({
   // scheme:userthatisnamedpostgres:password for postgress@localhost on pc/the database named users
 
   // connectionString: 'postgres://postgres:Tritrung01@localhost/users' (this string is for use on pc, not heroku)
-  connectionString: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 })
 
 
