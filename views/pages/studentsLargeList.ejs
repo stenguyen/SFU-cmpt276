@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include ("../partials/header.ejs") %>
+</head>
+<body>
+  <!--uses studentNAV.ejs for formatting header-->
+  <%- include ("../partials/studentNAV.ejs") %>
+
+  <div class="container">
+  <h1 span style="font-weight: bold">Large Student Database</h1>
+  <!-- table to shwo the student data -->
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Weight</th>
+      <th>Height</th>
+      <th>Hair Colour</th>
+      <th>GPA</th>
+    </tr>
+    <% results.forEach(function(r) { %>
+      <td><%= r.id %></td>
+      <!-- assign link to user on the name of the student  -->
+      <td><a href="<%= 'studentsLargeList/' + r.id %>"><%= r.name %></a></td>
+      <td><%= r.weight %></td>
+      <td><%= r.height %></td>
+      <td><%= r.colour %></td>
+      <td><%= r.gpa %></td>
+    </tr>
+    <% }); %>
+  </table>
+  <!-- return button that goes back to db.ejs -->
+  <button><a href="/database">Return</a></button>
+
+  </div>
+</body>
+</html>
