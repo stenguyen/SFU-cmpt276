@@ -1,0 +1,43 @@
+/* main body of the site */
+body{
+    background-color: lightcyan;
+}
+
+/* header */
+/* can't get this to work */
+.header{
+    background-color: var(--darkGrey);
+    width: 100%;
+    padding: 10px;
+}
+
+/* class which stores default stats for most of the site*/
+.container{
+    font-family:'Lucida Sans';
+    font-size: 1.8em;
+
+
+}
+
+/* values for the "titles" of the site */
+.title{
+    font-weight: bold;
+    font-family: 'Trebuchet MS';
+    font-size: 2em;
+
+}
+/* an id just for the front page to shift the list to the right */
+#frontPage {
+    margin-left: 5%;
+}
+
+/* format the tables */
+table {
+    width: 60%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: white;
+}

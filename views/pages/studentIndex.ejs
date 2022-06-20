@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--uses header.ejs for formatting-->
+    <%- include ("../partials/header.ejs") %>
+</head>
+<body>
+    <!--uses studentNAV.ejs for formatting header-->
+    <%- include ("../partials/studentNAV.ejs") %>
+
+<!--container for the entire visable text-->
+<div class="container">
+    <!-- main title of the page -->
+    <h1 class="title">Student Database Webapp</h1>
+    <!-- format the text on the front page -->
+    <div id="frontPage">
+        <h2>What you can do on this site!</h2>
+
+        <!-- create an unordered list -->
+        <ul>
+            <li>
+                View the database by pressing the "Database" tab
+            </li>
+            <li>
+                Add a new student to the database
+            </li>
+            <li>
+                Perform actions on the student's data
+                <ul>
+                    <li>
+                        View their attributes
+                    </li>
+                    <li>
+                        Edit their data
+                    </li>
+                    <li>
+                        Delete the student
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

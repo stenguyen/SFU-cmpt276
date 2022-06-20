@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/header.ejs") %>
+    <!-- stylesheets for the larger student list -->
+</head>
+
+<body>
+    <!--uses studentNAV.ejs for formatting header-->
+    <%- include ("../partials/studentNAV.ejs") %>
+
+    <div class="container">
+        <!-- using svg shapes to create rectangles -->
+        <svg>
+            <% results.forEach(function(r) { %>
+            <rect width="<%= r.weight %>%"px height="<%= r.height %>"px fill="<%= r.colour %>"></rect>
+            <% }); %>
+        </svg>
+
+        <!-- print out the tables with all the data -->
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Hair Colour</th>
+                <th>GPA</th>
+            </tr>
+            <% results.forEach(function(r) { %>
+                <td><%= r.id %></td>
+                <td><%= r.name %></a></td>
+                <td><%= r.weight %></td>
+                <td><%= r.height %></td>
+                <td><%= r.colour %></td>
+                <td><%= r.gpa %></td>
+            </tr>
+            <% }); %>
+        </table>
+
+    <!-- buttons that invoke a post command to either edit or delete -->
+    <!-- clicking either button means it's either delete or edit -->
+    <form method="post">
+        <button name="button" value="edit">Edit</button>
+        <button name="button" value="delete" span style="margin:-5px">Delete</button>
+    </form>
+
+    <!-- return button that goes back to db.ejs by linking straight to the page-->
+    <button><a href="/database">Return</a></button>
+
+    </div>
+</body>
+</html>

@@ -5,27 +5,32 @@
 </head>
 
 <body>
+    <!--uses studentNAV.ejs for formatting header-->
+    <%- include ("../partials/studentNAV.ejs") %>
 
-<%- include ("../partials/nav.ejs") %>
-
-<div class="container">
-<h2>Database Results</h2>
-
-<ul>
-    <!--the '<% %>' in an ejs file means that you are referring to javascript/using javascript-->
-    <!-- for everything inside of it -->
-    <% rows.forEach(function(r) { %>
-        <!-- results is referring to the results given from index.js -->
-        <!-- for everything in results, print out r -->
-        <!-- print all r's in terms of list items (li) -->
-        <!-- <li> <%= r %> </li> -->
-
-        <!--print out the uid and the age of the each row-->
-        <li> <%= r.uid %>, <%= r.age %> </li>
+  <div class="container">
+    <h1 class="title">Student Database List</h1>
+    <!-- print out the table -->
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>GPA</th>
+        <th>Hair Colour</th>
+      </tr>
+      <% results.forEach(function(r) { %>
+      <tr>
+        <!-- link that will send the user to the custom student -->
+        <td><a href="<%= 'studentsLargeList/' + r.id %>"><%= r.name %></a></td>
+        <td><%= r.gpa %></td>
+        <td><%= r.colour%></td>
+      </tr>
     <% }); %>
-</ul>
+    </table>
 
-</div>
+    <!-- add two buttons to add and view the data -->
+    <button><a href="/add">Add new student</a></button>
+    <button><a href="/view">Larger student database</a></button>
+  </div>
 
 </body>
 </html>
